@@ -14,4 +14,7 @@ A collection of try-outs aimed on predicting (financial) time series with neural
 [Beginner tutorial](http://outlace.com/Beginner-Tutorial-Theano/)
 
 #### Keras
-[Keras recurrent tutorial](https://github.com/Vict0rSch/deep_learning/tree/master/keras/recurrent)
+link | comments
+-----|--------------
+[Keras documentation](https://keras.io) |  original documentation
+[Keras recurrent tutorial](https://github.com/Vict0rSch/deep_learning/tree/master/keras/recurrent) |  example of recurrent net. 
