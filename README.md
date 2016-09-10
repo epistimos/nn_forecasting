@@ -1,6 +1,9 @@
 # nn_forecasting
 A collection of try-outs aimed on predicting (financial) time series with neural networks
 
+*I've decided that it would be a better idea to continue on a private repo, in case I do succeed in predicting the future prices and become incredibly rich ;-)*
+
+
 ## Resources
 
 ### Time Series
