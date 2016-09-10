@@ -13,6 +13,11 @@ The classes themselves take care of preprocessing data etc.
 import pandas as pd
 import numpy as np
 
+# get module path, used for loading data
+from os.path import split, join, normpath
+
+path = normpath(join(split(__file__)[0],'data'))
+
 
 class Dataset():
     """ 
@@ -75,7 +80,7 @@ class AirPassengers(Dataset):
         
         Dataset.__init__(self,self.__doc__)
         dateparse = lambda dates: pd.datetime.strptime(dates, '%Y-%m')
-        self.Y = pd.read_csv('data/AirPassengers.csv', parse_dates='Month', index_col='Month',date_parser=dateparse)
+        self.Y = pd.read_csv(join(path,'AirPassengers.csv'), parse_dates='Month', index_col='Month',date_parser=dateparse)
         
         
     def plot(self):
@@ -85,6 +90,7 @@ class AirPassengers(Dataset):
 if __name__ == "__main__":
     # quick tests 
 
+    print(path)
     ds = AirPassengers()
     print(ds)
     
