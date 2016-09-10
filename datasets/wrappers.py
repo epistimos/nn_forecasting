@@ -11,18 +11,62 @@ The classes themselves take care of preprocessing data etc.
 
 
 import pandas as pd
+import numpy as np
 
 
 class Dataset():
-    """ base class for creating dataset wrappers """
+    """ 
+    base class for creating dataset wrappers 
+
+    Parameters from subclass
+    --------------------------
+    description : a short description about the dataset
+    Y : target vector shape Nx1
+    X : observation dataset
+    
+    
+    Methods
+    -------------
+    Xlag(nLags) : returns a [NxnLags] matrix where each column is lagged by n samples
+
+    
+    
+    """
     
     def __init__(self, description=''):
         
         self.description = description
         
+        
+    def Xlag(self,nLags=1):
+        """ 
+        
+        generate lagged values 
+
+        Parameters
+        ------------
+        nLags : int
+            number of lags (= number of returned columns)         
+    
+        """
+
+
+        lags = range(1,nLags+1)
+        data = np.tile(self.Y.values.reshape(-1,1),(1,nLags))
+        X = pd.DataFrame(index = self.Y.index, data= data,columns= lags)
+        
+        
+        
+        for lag in lags:
+            X[lag] = X[lag].shift(lag)
+            
+        return  X
+                
     def __repr__(self):
         
         return self.description + '\nLength=%i rows' % len(self.Y)
+    
+    
 
 
 class AirPassengers(Dataset):
@@ -34,8 +78,17 @@ class AirPassengers(Dataset):
         self.Y = pd.read_csv('data/AirPassengers.csv', parse_dates='Month', index_col='Month',date_parser=dateparse)
         
         
+    def plot(self):
+        
+        self.Y.plot()
+        
 if __name__ == "__main__":
     # quick tests 
 
     ds = AirPassengers()
     print(ds)
+    
+    df = ds.Xlag(3)
+    df['Y'] = ds.Y    
+    
+    print(df.head(10))
