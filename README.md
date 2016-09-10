@@ -4,14 +4,18 @@ A collection of try-outs aimed on predicting (financial) time series with neural
 ## Resources
 
 ### Introduction to NN
-
-[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html)
-
+link | comments
+-----|--------------
+[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) |  
+[Neural Networks Demystified](https://github.com/stephencwelch/Neural-Networks-Demystified) | Fantastic tutorial on building an NN from scratch. Includes very illustrative video lectures. Highly recommended!
 
 ### Frameworks and libraries
 
 #### Theano
-[Beginner tutorial](http://outlace.com/Beginner-Tutorial-Theano/)
+link | comments
+-----|--------------
+[Beginner tutorial](http://outlace.com/Beginner-Tutorial-Theano/) | Quick getting started tutorial
+
 
 #### Keras
 link | comments
