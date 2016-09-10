@@ -22,3 +22,4 @@ link | comments
 -----|--------------
 [Keras documentation](https://keras.io) |  original documentation
 [Keras recurrent tutorial](https://github.com/Vict0rSch/deep_learning/tree/master/keras/recurrent) |  example of recurrent net. 
+[Machine learning mastery](http://machinelearningmastery.com/time-series-prediction-with-deep-learning-in-python-with-keras/) | Easy to follow tutorial on time series prediction, but contains pretty serious conceptual mistakes.
