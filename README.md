@@ -3,11 +3,19 @@ A collection of try-outs aimed on predicting (financial) time series with neural
 
 ## Resources
 
+### Time Series
+link | comments
+-----|--------------
+[Guide to Time Series frorecast](https://www.analyticsvidhya.com/blog/2016/02/time-series-forecasting-codes-python/) | Good example of ple of the steps involved in time series prediction 
+
+
+
 ### Introduction to NN
 link | comments
 -----|--------------
 [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/index.html) |  
 [Neural Networks Demystified](https://github.com/stephencwelch/Neural-Networks-Demystified) | Fantastic tutorial on building an NN from scratch. Includes very illustrative video lectures. Highly recommended!
+[How to build a neural network](http://stevenmiller888.github.io/mind-how-to-build-a-neural-network/) | Very clear description of a simple NN
 
 ### Frameworks and libraries
 
